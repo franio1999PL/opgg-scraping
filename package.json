@@ -1,0 +1,22 @@
+{
+  "name": "opgg-api",
+  "version": "1.0.0",
+  "description": "Scraping op.gg user stats",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "opgg"
+  ],
+  "author": "Franciszek Sikora",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
