@@ -14,7 +14,7 @@ app.get('/user', async (req, res) => {
   const nickname = req.query.nickname
   const server = req.query.server
 
-  const browser = await playwright.chromium.launch()
+  const browser = await playwright.
   const context = await browser.newContext()
   const page = await context.newPage()
   await page.goto(`https://www.op.gg/summoners/${server}/${nickname}`)
