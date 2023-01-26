@@ -1,5 +1,5 @@
 const express = require('express')
-const puppeteer = require('puppeteer')
+const playwright = require('playwright')
 const fs = require('fs')
 
 const app = express()
@@ -14,8 +14,9 @@ app.get('/user', async (req, res) => {
   const nickname = req.query.nickname
   const server = req.query.server
 
-  const browser = await puppeteer.launch()
-  const page = await browser.newPage()
+  const browser = await playwright.chromium.launch()
+  const context = await browser.newContext()
+  const page = await context.newPage()
   await page.goto(`https://www.op.gg/summoners/${server}/${nickname}`)
 
   if (
